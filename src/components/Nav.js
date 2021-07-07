@@ -185,7 +185,7 @@ class Nav extends Component {
       <Navigation className="test">
         <div className="logo">
           <Link to="/">
-            <p>Virtual SageMaker Admin</p>
+            <p>Virtual Labs Admin</p>
           </Link>
         </div>
         <nav className="nav">
@@ -198,11 +198,11 @@ class Nav extends Component {
             <NavLink activeClassName="active" to="/about">
               <li>Users</li>
             </NavLink>
-          
+
             <NavLink activeClassName="active" to="/editgroup">
               <li>Groups</li>
             </NavLink>
-            
+
             <NavLink activeClassName="active" to="/sauvegarde">
               <li>Usage</li>
             </NavLink>
