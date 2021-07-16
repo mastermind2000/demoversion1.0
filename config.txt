@@ -1,0 +1,6 @@
+Btech-cs-1,Btech-cs-1.txt,ml.t2.medium,60,ml.t2.large,30
+Btech-cs-2,Btech-cs-2.txt,ml.t2.medium,120,ml.t2.large,60
+Btech-cs-3,Btech-cs-3.txt,ml.t2.large,60,ml.t2.xlarge,30
+Btech-cs-4,Btech-cs-4.txt,ml.t2.large,120,ml.t2.xlarge,60
+Mtech-cs-1,Mtech-cs-1.txt,ml.t2.large,60,ml.t2.xlarge,30,ml.c4.xlarge,30
+Mtech-cs-2,Mtech-cs-2.txt,ml.t2.large,120,ml.t2.xlarge,60,ml.c4.xlarge,60

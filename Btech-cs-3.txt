@@ -1,0 +1,111 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "sagemaker:CreateTrainingJob",
+                "sagemaker:CreateProcessingJob",
+                "sagemaker:CreateNotebookInstance"
+            ],
+            "Resource": [
+                "arn:aws:sagemaker:*:405985732162:processing-job/*",
+                "arn:aws:sagemaker:*:405985732162:training-job/*",
+                "arn:aws:sagemaker:*:405985732162:notebook-instance/*"
+            ],
+            "Condition": {
+                "ForAnyValue:StringEquals": {
+                    "sagemaker:InstanceTypes": [
+                        "ml.t2.large",
+                        "ml.t2.xlarge"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "sagemaker:DescribeTrainingJob",
+                "kms:ListKeyPolicies",
+                "kms:ListRetirableGrants",
+                "sagemaker:DescribeNotebookInstance",
+                "sagemaker:StopProcessingJob",
+                "sagemaker:StopTrainingJob",
+                "kms:ListResourceTags",
+                "sagemaker:DescribeHyperParameterTuningJob",
+                "kms:ListGrants",
+                "sagemaker:DescribeNotebookInstanceLifecycleConfig",
+                "iam:PassRole",
+                "sagemaker:DescribeTransformJob",
+                "sagemaker:ListTrainingJobsForHyperParameterTuningJob",
+                "sagemaker:StopNotebookInstance",
+                "sagemaker:AddTags"
+            ],
+            "Resource": [
+                "arn:aws:sagemaker:*:405985732162:project/*",
+                "arn:aws:sagemaker:*:405985732162:feature-group/*",
+                "arn:aws:sagemaker:*:405985732162:image/*",
+                "arn:aws:sagemaker:*:405985732162:endpoint-config/*",
+                "arn:aws:sagemaker:*:405985732162:processing-job/*",
+                "arn:aws:sagemaker:*:405985732162:hyper-parameter-tuning-job/*",
+                "arn:aws:sagemaker:*:405985732162:app/*/*/*/*",
+                "arn:aws:sagemaker:*:405985732162:automl-job/*",
+                "arn:aws:sagemaker:*:405985732162:model-package-group/*",
+                "arn:aws:sagemaker:*:405985732162:app-image-config/*",
+                "arn:aws:sagemaker:*:405985732162:data-quality-job-definition/*",
+                "arn:aws:sagemaker:*:405985732162:model-quality-job-definition/*",
+                "arn:aws:sagemaker:*:405985732162:model-package/*",
+                "arn:aws:sagemaker:*:405985732162:experiment/*",
+                "arn:aws:sagemaker:*:405985732162:user-profile/*/*",
+                "arn:aws:sagemaker:*:405985732162:context/*",
+                "arn:aws:sagemaker:*:405985732162:endpoint/*",
+                "arn:aws:sagemaker:*:405985732162:notebook-instance/*",
+                "arn:aws:sagemaker:*:405985732162:artifact/*",
+                "arn:aws:sagemaker:*:405985732162:transform-job/*",
+                "arn:aws:sagemaker:*:405985732162:edge-packaging-job/*",
+                "arn:aws:sagemaker:*:405985732162:action/*",
+                "arn:aws:sagemaker:*:405985732162:domain/*",
+                "arn:aws:sagemaker:*:405985732162:notebook-instance-lifecycle-config/*",
+                "arn:aws:sagemaker:*:405985732162:experiment-trial/*",
+                "arn:aws:sagemaker:*:405985732162:labeling-job/*",
+                "arn:aws:sagemaker:*:405985732162:flow-definition/*",
+                "arn:aws:sagemaker:*:405985732162:training-job/*",
+                "arn:aws:sagemaker:*:405985732162:algorithm/*",
+                "arn:aws:sagemaker:*:405985732162:pipeline/*",
+                "arn:aws:sagemaker:*:405985732162:experiment-trial-component/*",
+                "arn:aws:sagemaker:*:405985732162:model-explainability-job-definition/*",
+                "arn:aws:sagemaker:*:405985732162:workteam/*",
+                "arn:aws:sagemaker:*:405985732162:model-bias-job-definition/*",
+                "arn:aws:sagemaker:*:405985732162:device-fleet/*",
+                "arn:aws:sagemaker:*:405985732162:human-task-ui/*",
+                "arn:aws:sagemaker:*:405985732162:monitoring-schedule/*",
+                "arn:aws:sagemaker:*:405985732162:model/*",
+                "arn:aws:sagemaker:*:405985732162:code-repository/*",
+                "arn:aws:kms:*:405985732162:key/*",
+                "arn:aws:iam::405985732162:role/*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": "sagemaker:AddTags",
+            "Resource": "arn:aws:sagemaker:*:405985732162:device-fleet/*/device/*"
+        },
+        {
+            "Sid": "VisualEditor3",
+            "Effect": "Allow",
+            "Action": [
+                "sagemaker:ListProcessingJobs",
+                "kms:ListKeys",
+                "sagemaker:ListTransformJobs",
+                "kms:ListAliases",
+                "iam:ListRoles",
+                "sagemaker:ListTrainingJobs",
+                "sagemaker:ListNotebookInstances"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
